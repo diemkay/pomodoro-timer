@@ -2,9 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 
 :root {
-  --primary: #624ce0;
-  --secondary: #e8effc;
-  --tertiary: #f5ef45;
+  --color1: #624ce0;
+  --color2: #e8effc;
+  --color3: #f5ef45;
+  --color4: #1b1c30;
+  --color5: #f46c95;
   --size1: 2px;
   --size2: 4px;
   --size3: 6px;
@@ -16,14 +18,15 @@
 }
 
 body {
-  background: var(--secondary);
-  color: var(--primary);
+  background: var(--color2);
+  color: var(--color1);
   font-family: 'Libre Franklin', sans-serif;
   padding: var(--size6);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 * > * {
@@ -35,15 +38,14 @@ h1 {
   font-weight: 900;
   font-size: 48px;
   text-align: center;
+  color: var(--color4);
 }
 
-#break,
-#session {
-  width: 300px;
+.timer-container {
   height: 75px;
   padding: 6px;
-  background-color: var(--primary);
-  color: var(--secondary);
+  background-color: var(--color1);
+  color: var(--color2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,12 +56,16 @@ h1 {
   font-size: 18px;
 }
 
+.timer-container,
 #timer {
-  width: 300px;
+  width: 350px;
+}
+
+#timer {
   height: 300px;
   padding: 6px;
-  background-color: var(--primary);
-  color: var(--secondary);
+  background-color: var(--color4);
+  color: var(--color2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,9 +93,9 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--color1);
 }
 
 footer a:hover {
-  background: var(--tertiary);
+  background: var(--color3);
 }

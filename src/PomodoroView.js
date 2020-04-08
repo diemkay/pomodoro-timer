@@ -1,14 +1,24 @@
 import React from 'react';
 import { Footer } from './Footer';
-import { Break } from './Break';
-import { Session } from './Session';
+
 import { Timer } from './Timer';
+import { SetTime } from './SetTime';
 
 export const PomodoroView = () => (
   <React.Fragment>
     <h1>Hello Tomato</h1>
-    <Break />
-    <Session />
+    <SetTime
+      timeUnit={'Break'}
+      label={'break-label'}
+      increment={'break-increment'}
+      decrement={'break-decrement'}
+    />
+    <SetTime
+      timeUnit={'Session'}
+      label={'session-label'}
+      increment={'session-increment'}
+      decrement={'session-decrement'}
+    />
     <Timer />
     <Footer />
   </React.Fragment>
