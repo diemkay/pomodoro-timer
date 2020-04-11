@@ -1,25 +1,37 @@
 import React from 'react';
+import { SetTime } from './SetTime';
+import { TimerDisplay } from './TimerDisplay';
 import { Footer } from './Footer';
 
-import { Timer } from './Timer';
-import { SetTime } from './SetTime';
-
-export const PomodoroView = () => (
+export const PomodoroView = ({
+  breakLength,
+  sessionLength,
+  handleLengthChange,
+  handleReset,
+  currentActivity,
+  convertToTime,
+  totalAmount,
+  isActive,
+}) => (
   <React.Fragment>
     <h1>Hello Tomato</h1>
     <SetTime
-      timeUnit={'Break'}
-      label={'break-label'}
-      increment={'break-increment'}
-      decrement={'break-decrement'}
+      length={breakLength}
+      timerType={'Break'}
+      handleLengthChange={handleLengthChange}
     />
     <SetTime
-      timeUnit={'Session'}
-      label={'session-label'}
-      increment={'session-increment'}
-      decrement={'session-decrement'}
+      length={sessionLength}
+      timerType={'Session'}
+      handleLengthChange={handleLengthChange}
     />
-    <Timer />
+    <TimerDisplay
+      handleReset={handleReset}
+      currentActivity={currentActivity}
+      convertToTime={convertToTime}
+      totalAmount={totalAmount}
+      isActive={isActive}
+    />
     <Footer />
   </React.Fragment>
 );

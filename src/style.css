@@ -27,10 +27,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  box-sizing: border-box;
 }
 
 * > * {
-  margin: 6px;
+  margin: 8px;
 }
 
 h1 {
@@ -41,9 +42,17 @@ h1 {
   color: var(--color4);
 }
 
-.timer-container {
+h3 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/* SET TIME */
+
+.setting-container {
+  width: 350px;
   height: 75px;
-  padding: 6px;
+  padding: 3px;
   background-color: var(--color1);
   color: var(--color2);
   display: flex;
@@ -51,15 +60,20 @@ h1 {
   justify-content: center;
 }
 
-#break-label,
-#session-label {
-  font-size: 18px;
+.setting-container > * {
+  margin: 3px;
+  padding: 3px;
+}
+.setting-description {
+  width: 80px;
 }
 
-.timer-container,
-#timer {
-  width: 350px;
+#break-label,
+#session-label {
+  font-size: 16px;
 }
+
+/* TIMER DISPLAY */
 
 #timer {
   height: 300px;

@@ -1,13 +1,25 @@
 import React from 'react';
 import { FiMinusCircle, FiPlusCircle } from 'react-icons/fi';
 
-export const SetTime = ({ timeUnit, label, increment, decrement }) => {
+export const SetTime = ({ length, timerType, handleLengthChange }) => {
+  const id = timerType.toLowerCase();
+
   return (
-    <div class="timer-container">
-      <div id={label}>{timeUnit} Length</div>
-      <FiMinusCircle id={decrement} size="40px" />
-      TODO: Default {timeUnit} length
-      <FiPlusCircle id={increment} size="40px" />
+    <div className="setting-container">
+      <div className="setting-description" id={`${id}-label}`}>
+        {timerType} Length
+      </div>
+      <FiMinusCircle
+        id={`${id}-decrement`}
+        size="35px"
+        onClick={() => handleLengthChange(id, -1)}
+      />
+      <h3> {length}</h3>
+      <FiPlusCircle
+        id={`${id}-increment`}
+        size="35px"
+        onClick={() => handleLengthChange(id, 1)}
+      />
     </div>
   );
 };

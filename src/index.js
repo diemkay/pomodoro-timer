@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
-import { PomodoroView } from './PomodoroView';
+import { PomodoroController } from './PomodoroController';
 
-const App = () => <PomodoroView />;
+const App = () => <PomodoroController />;
 
 ReactDOM.render(<App />, document.getElementById('root'));
