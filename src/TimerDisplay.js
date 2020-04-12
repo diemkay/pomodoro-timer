@@ -14,17 +14,15 @@ export const TimerDisplay = ({
       <div id="timer-label">
         <h2>{currentActivity}</h2>
       </div>
-      <div id="time-left">
-        <div id="session-length">{convertToTime(totalAmount)}</div>
-      </div>
+      <div id="time-left">{convertToTime(totalAmount)}</div>
       <div id="timer-controls">
-        {!isActive ? (
-          <FiPlayCircle id="start_stop" size="70px" onClick={handleOnOff} />
-        ) : (
-          <FiPauseCircle id="start_stop" size="70px" onClick={handleOnOff} />
-        )}
-
-        <FiRotateCcw id="reset" size="70px" alt="Reset Session" onClick={handleReset} />
+        <div id="start_stop" onClick={handleOnOff}>
+          {!isActive ? <FiPlayCircle size="70px" /> : <FiPauseCircle size="70px" />}
+        </div>
+        <div id="reset" onClick={handleReset}>
+          <FiRotateCcw size="70px" alt="Reset Session" />
+        </div>
+        <audio id="beep" src="./sounds/robotbeep.wav" />
       </div>
     </div>
   );

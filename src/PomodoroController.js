@@ -71,12 +71,16 @@ export class PomodoroController extends React.Component {
   handleTick = () => {
     const { totalAmount, currentActivity, breakLength, sessionLength } = this.state;
 
+    const audio = document.getElementById('beep');
+
     if (totalAmount <= 0) {
       this.setState({
         currentActivity: currentActivity === 'Session' ? 'Break' : 'Session',
         totalAmount:
           currentActivity === 'Session' ? breakLength * 60 : sessionLength * 60,
       });
+
+      audio.play();
     } else {
       this.setState({
         totalAmount: totalAmount - 1,
@@ -85,7 +89,12 @@ export class PomodoroController extends React.Component {
   };
 
   handleReset = () => {
+    const audio = document.getElementById('beep');
+
     clearInterval(this.state.timer);
+
+    audio.pause();
+    audio.currentTime = 0;
 
     this.setState({
       breakLength: 5,

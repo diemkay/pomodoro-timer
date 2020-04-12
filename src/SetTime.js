@@ -6,20 +6,24 @@ export const SetTime = ({ length, timerType, handleLengthChange }) => {
 
   return (
     <div className="setting-container">
-      <div className="setting-description" id={`${id}-label}`}>
+      <div className="setting-description" id={`${id}-label`}>
         {timerType} Length
       </div>
-      <FiMinusCircle
+      <div
+        className="fa-icon"
         id={`${id}-decrement`}
-        size="35px"
         onClick={() => handleLengthChange(id, -1)}
-      />
-      <h3> {length}</h3>
-      <FiPlusCircle
+      >
+        <FiMinusCircle size="35px" />
+      </div>
+      <h3 id={`${id}-length`}>{length}</h3>
+      <div
+        className="fa-icon"
         id={`${id}-increment`}
-        size="35px"
         onClick={() => handleLengthChange(id, 1)}
-      />
+      >
+        <FiPlusCircle size="35px" />
+      </div>
     </div>
   );
 };
