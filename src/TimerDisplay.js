@@ -7,6 +7,7 @@ export const TimerDisplay = ({
   totalAmount,
   convertToTime,
   isActive,
+  handleOnOff,
 }) => {
   return (
     <div id="timer">
@@ -18,9 +19,9 @@ export const TimerDisplay = ({
       </div>
       <div id="timer-controls">
         {!isActive ? (
-          <FiPlayCircle id="start_stop" size="70px" alt="Start/Stop Timer" />
+          <FiPlayCircle id="start_stop" size="70px" onClick={handleOnOff} />
         ) : (
-          <FiPauseCircle id="start_stop" size="70px" alt="Start/Stop Timer" />
+          <FiPauseCircle id="start_stop" size="70px" onClick={handleOnOff} />
         )}
 
         <FiRotateCcw id="reset" size="70px" alt="Reset Session" onClick={handleReset} />

@@ -12,6 +12,7 @@ export const PomodoroView = ({
   convertToTime,
   totalAmount,
   isActive,
+  handleOnOff,
 }) => (
   <React.Fragment>
     <h1>Hello Tomato</h1>
@@ -31,6 +32,7 @@ export const PomodoroView = ({
       convertToTime={convertToTime}
       totalAmount={totalAmount}
       isActive={isActive}
+      handleOnOff={handleOnOff}
     />
     <Footer />
   </React.Fragment>
