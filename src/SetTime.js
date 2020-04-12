@@ -16,7 +16,9 @@ export const SetTime = ({ length, timerType, handleLengthChange }) => {
       >
         <FiMinusCircle size="35px" />
       </div>
-      <h3 id={`${id}-length`}>{length}</h3>
+      <div className="setting-length">
+        <h3 id={`${id}-length`}>{length}</h3>
+      </div>
       <div
         className="fa-icon"
         id={`${id}-increment`}

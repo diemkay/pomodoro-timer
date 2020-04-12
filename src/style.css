@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 
 :root {
   --color1: #624ce0;
@@ -35,7 +34,6 @@ body {
 }
 
 h1 {
-  /* font-family: 'Calistoga', cursive; */
   font-weight: 900;
   font-size: 48px;
   text-align: center;
@@ -66,6 +64,11 @@ h3 {
 }
 .setting-description {
   width: 80px;
+}
+
+.setting-length {
+  width: 2ch;
+  margin-right: 2ch;
 }
 
 #break-label,
